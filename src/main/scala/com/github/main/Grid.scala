@@ -17,7 +17,7 @@ object Grid {
    * @param axisName the name of the axis (used for error messages)
    * @return ValidatedNel[Error, Int]
    */
-  private def validateGridAxisSize(axis: Int, axisName: String): Validated[NonEmptyList[Error], Int] = {
+  private def validateGridAxisSize(axis: Int, axisName: String): ValidatedNel[Error, Int] = {
     Validated.cond(
       axis > 0,
       axis,
